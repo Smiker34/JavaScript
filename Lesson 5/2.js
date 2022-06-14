@@ -12,7 +12,7 @@ var basket = {
     },
 
     basket_lenght() {
-        count = 0;
+        var count = 0;
         for (var item in this.items) {
             count += this.items[item]["count"];
         }
@@ -33,7 +33,7 @@ function basket_menu() {
             menu.setAttribute("id", "menu");
             var basket_fullness = basket.basket_lenght()
             if (basket_fullness > 0) {
-                sum = basket.total_price()
+                var sum = basket.total_price()
                 if (basket_fullness % 10 == 1) {
                     menu.append("В корзине " + basket_fullness + " товар на сумму " + sum + " рублей.");
                 } else if (1 < basket_fullness % 10 && basket_fullness % 10 < 5) {
@@ -48,7 +48,7 @@ function basket_menu() {
             menu.style.border = "2px solid black";
 
             document.querySelector("#basket").appendChild(menu);
-        };
+        }
     };
 
     window.onclick = function (event) {
