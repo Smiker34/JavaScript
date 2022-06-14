@@ -70,9 +70,7 @@ function catalog() {
             button_back.style.height = "350px";
             button_back.append("back");
             button_back.onclick = function () {
-                if (idx == 0) {
-                    return;
-                } else {
+                if (idx != 0) {
                     idx--
                     picture.src = "img/big image/" + products[product]["img"][idx];
                 }
@@ -83,9 +81,7 @@ function catalog() {
             button_next.style.height = "350px";
             button_next.append("next");
             button_next.onclick = function () {
-                if (idx == (products[product]["img"].length - 1)) {
-                    return;
-                } else {
+                if if (idx != (products[product]["img"].length - 1)) {
                     idx++
                     picture.src = "img/big image/" + products[product]["img"][idx];
                 }
