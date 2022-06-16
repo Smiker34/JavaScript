@@ -81,7 +81,7 @@ function catalog() {
             button_next.style.height = "350px";
             button_next.append("next");
             button_next.onclick = function () {
-                if if (idx != (products[product]["img"].length - 1)) {
+                if (idx != (products[product]["img"].length - 1)) {
                     idx++
                     picture.src = "img/big image/" + products[product]["img"][idx];
                 }
